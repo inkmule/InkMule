@@ -15,14 +15,14 @@ body{
 	height: 100%;
 	
 	/* Negative indent footer by it's height */
-	margin: 0 auto -60px;
+	margin: 0 auto -180px;
 }
 
 
 /* Set the fixed height of the footer here */
 #push,
 #footer {
-	height: 60px;
+	height: 180px;
 }
 #footer {
 	background-color: #27272B;
@@ -58,4 +58,10 @@ body{
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
 	background-color: #fdc010;
 	box-shadow:none;
+}
+#footer h4 {
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0.75;
+	color:#fff;
 }
