@@ -21,9 +21,21 @@
 	<script src="<?php echo base_url('assets/js/custom.js') ?>"></script>
 </head>
 <body>
-	
-  <!-- Part 1: Wrap all page content here -->
-    <div id="wrap">
 
-      <!-- Begin page content -->
-      <div class="container">
+	<div id="wrap">
+
+	      <!-- Fixed navbar -->
+	      <div class="navbar navbar-fixed-top">
+	        <div class="navbar-inner">
+	          <div class="container">
+	            <a class="brand" href="#">Project name</a>
+	            <div class="nav-collapse collapse">
+	              <ul class="nav pull-right">
+	              </ul>
+	            </div><!--/.nav-collapse -->
+	          </div>
+	        </div>
+	      </div>
+
+	      <!-- Begin page content -->
+	      <div class="container">
