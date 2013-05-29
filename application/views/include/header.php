@@ -21,3 +21,9 @@
 	<script src="<?php echo base_url('assets/js/custom.js') ?>"></script>
 </head>
 <body>
+	
+  <!-- Part 1: Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Begin page content -->
+      <div class="container">
