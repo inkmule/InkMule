@@ -39,13 +39,14 @@ body{
 }
 
 #wrap > .container {
-	padding-top: 60px;
+	padding-top: 70px;
 }
 
 /*style the navbar*/
 .navbar-inner{
 	background-image: none;
 	background-color: #0079A5;
+	min-height:50px;
 }
 .navbar .brand{
 	color:#fff;
