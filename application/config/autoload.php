@@ -54,6 +54,7 @@ $autoload['packages'] = array();
 
 $autoload['libraries'] = array('database', 'session');
 
+$autoload['sparks'] = array('php-activerecord/0.0.2');
 
 /*
 | -------------------------------------------------------------------
