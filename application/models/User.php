@@ -6,7 +6,7 @@ class User extends ActiveRecord\Model{
 	
 	function before_save(){
 		if($this->password)
-			$this->hashed_password = $this->hash_password($this->password)
+			$this->hashed_password = $this->hash_password($this->password);
 	}
 	
 	function hash_password($password){
@@ -14,7 +14,7 @@ class User extends ActiveRecord\Model{
 		$salt = bin2hex(mcrypt_create_iv(32, MCRYPT_DEV_URANDOM));
 		$hash = hash('sha256', $salt . $password);
 		
-		return $salt . $hash
+		return $salt . $hash;
 	}
 	
 	private function validate_password($password){
@@ -25,5 +25,15 @@ class User extends ActiveRecord\Model{
 		$password_hash = hash('sha256', $salt . $password);
 		
 		return $password_hash == $hash;
+	}
+	
+	public static function login($email, $password){
+		
+		$user = User::find_by_email($email);
+		
+		if($user && $user->validate_password($password))
+			return $user;
+		else
+			return FALSE;
 	}
 }
