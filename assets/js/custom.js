@@ -84,4 +84,19 @@ frontpage.public_function();
  */
 $(document).ready(function() {
 	frontpage.init();
+	
+	//hover effect for footer links
+	$('#footer a').hover(function(){
+		
+		$(this).animate({
+			opacity: ".9"
+		},
+		500);
+	}, function(){
+		
+		$(this).animate({
+			opacity: ".25"
+		},
+		500);
+	});
 });

@@ -38,6 +38,7 @@ body{
 #footer a{
 	color: #F5F5FA;
 	text-decoration: none;
+	opacity:.25;
 }
 
 /* Lastly, apply responsive CSS fixes as necessary */
@@ -72,9 +73,26 @@ body{
 	background-color: #fdc010;
 	box-shadow:none;
 }
+
+/*style footer*/
 #footer h4 {
     font-size: 18px;
     font-weight: 600;
     opacity: 0.75;
 	color:#fff;
+}
+
+/*form element customization*/
+.btn-primary{
+	background-color: #0079A5;
+	background-image: none;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+	background-color: #0060A5;
+	background-image: none;
 }
