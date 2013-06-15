@@ -1,9 +1,18 @@
 <div class="hero-unit">
 	
-	<? echo form_open()?>
+	<? echo form_open('auth/login')?>
 		
 	<fieldset>
 		<legend>login</legend>
+	
+		<?if(isset($message)){?>
+		
+			<div class="alert-error">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>Error!</strong> <?echo $message;?>
+			</div>
+		
+		<?}?>
 	
 		<div class="control-group">
 		  <label class="control-label" for="inputIcon">email</label>

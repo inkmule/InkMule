@@ -10,12 +10,29 @@ class Auth extends Main_Controller {
 	
 	function login(){
 		
+		$data = array();
+		
+		if($_POST)
+		{
+			//user has submitted login
+			$user = User::validate_login($_POST['email'], $_POST['password']);
+			
+			if($user)
+				redirect('');
+			else
+			{
+				$data['message'] = 'The email/password combination supplied is invalid, please try again.';
+			}
+		}
 		$this->load->view('include/header');
-		$this->load->view('auth/login');
+		$this->load->view('auth/login', $data);
 		$this->load->view('include/footer');
 		
 	}
-}
 
-/* End of file frontpage.php */
-/* Location: ./application/controllers/frontpage.php */
+	function logout()
+	{
+		User::logout();
+		redirect('');
+	}
+}

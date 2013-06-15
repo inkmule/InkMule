@@ -3,18 +3,18 @@ class Frontpage extends Main_Controller {
 
    public function index()
 	{
+	
+		//$this->load->view('include/header');
 		
-		$this->load->view('include/header');
-		
-		$user = User::create(array(
+		/*User::create(array(
 			'email' => 'd.p.hostetler@gmail.com',
 			'password' => 'tdp61231'
-		));
+		));*/
 		
-		if(!$user) die('user could not be created');
-		echo $user->username . ' was added.';
-	
-		$this->load->view('include/footer');
+		if($this->user) die('The user ' . $this->user->email . ' is logged in.');
+		else die('nobody is logged in.');
+		
+		//$this->load->view('include/footer');
 	}
    
 }
