@@ -1,6 +1,4 @@
-<div class="hero-unit">
-	
-	<? echo form_open('auth/login')?>
+<? echo form_open('auth/login')?>
 		
 	<fieldset>
 		<legend>login</legend>
@@ -38,6 +36,4 @@
 	
 	</fieldset>
 	
-	</form>
-	
-</div>
+</form>

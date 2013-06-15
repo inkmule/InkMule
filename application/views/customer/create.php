@@ -1,7 +1,4 @@
-<div class="container">
-   <div class="hero-unit">
-		
-		<? echo form_open('customer/create')?>
+<? echo form_open('customer/create')?>
 		
 		<fieldset>
 		    <legend>create an account</legend>
@@ -59,7 +56,4 @@
 			<button type="submit" class="btn btn-primary">Submit</button>
 		
 		</fieldset>
-	</form>
-	
-   </div>
-</div>
+</form>

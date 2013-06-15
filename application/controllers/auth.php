@@ -10,7 +10,6 @@ class Auth extends Main_Controller {
 	
 	function login(){
 		
-		$data = array();
 		
 		if($_POST)
 		{
@@ -21,12 +20,9 @@ class Auth extends Main_Controller {
 				redirect('');
 			else
 			{
-				$data['message'] = 'The email/password combination supplied is invalid, please try again.';
+				$this->view_data['message'] = 'The email/password combination supplied is invalid, please try again.';
 			}
 		}
-		$this->load->view('include/header');
-		$this->load->view('auth/login', $data);
-		$this->load->view('include/footer');
 		
 	}
 
