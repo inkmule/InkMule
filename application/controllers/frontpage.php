@@ -6,7 +6,13 @@ class Frontpage extends Main_Controller {
 		
 		$this->load->view('include/header');
 		
-		$this->load->view('frontpage');
+		$user = User::create(array(
+			'email' => 'd.p.hostetler@gmail.com',
+			'password' => 'tdp61231'
+		));
+		
+		if(!$user) die('user could not be created');
+		echo $user->username . ' was added.';
 	
 		$this->load->view('include/footer');
 	}

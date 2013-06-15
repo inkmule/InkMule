@@ -4,8 +4,16 @@ class Auth extends Main_Controller {
 	public function index(){
 	
 		$this->load->view('include/header');
-		$this->load->view('forms/login');
+		$this->load->view('auth/login');
 		$this->load->view('include/footer');
+	}
+	
+	function login(){
+		
+		$this->load->view('include/header');
+		$this->load->view('auth/login');
+		$this->load->view('include/footer');
+		
 	}
 }
 
