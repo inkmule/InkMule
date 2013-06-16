@@ -58,12 +58,12 @@ class Customer extends Main_Controller
 					'usertype' => 'customer'
 				));
 				
-				redirect('customer/profile');
+				redirect('customer/dashboard');
 			}	
 		}
 	}
 	
-	function profile(){
+	function dashboard(){
 		
 	}
 }

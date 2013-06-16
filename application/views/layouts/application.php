@@ -14,11 +14,14 @@
 	<link href="<?php echo base_url('assets/css/font-awesome.css') ?>" rel="stylesheet">
    <link href="<?php echo base_url('assets/css/custom.css') ?>" rel="stylesheet">
 
-   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-   <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/1.2.1/lodash.min.js"></script>
-   <script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/1.2.1/lodash.min.js"></script>
+	<script src="<?php echo base_url('assets/js/bootstrap.min.js') ?>"></script>
 	<script src="<?php echo base_url('assets/js/custom.js') ?>"></script>
+	<? if(file_exists('./assets/js/' . $this->router->class . '/' . $this->router->method . '.js') ){?>
+		<script src="<?php echo base_url('assets/js/'. $this->router->class . '/' . $this->router->method . '.js') ?>"></script>
+	<?}?>
 </head>
 <body>
 
@@ -28,7 +31,7 @@
 	      <div class="navbar navbar-fixed-top">
 	        <div class="navbar-inner">
 	          <div class="container">
-	            <a class="brand" href="#">Project name</a>
+	            <a class="brand" href="#">InkMule</a>
 	            <div class="nav-collapse collapse">
 	              <ul class="nav pull-right">
 	              </ul>
@@ -81,7 +84,6 @@
 					<div id="footer_mailing_list" class="span2">
 						<h4>stay in touch</h4>
 						<div id="join_mailing_list">
-
 							<!-- Begin MailChimp Signup Form -->
 
 							<div id="mc_embed_signup">

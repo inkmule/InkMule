@@ -9,10 +9,11 @@ class Auth extends Main_Controller {
 	
 	function login(){
 		
+		//if user is already logged in, redirect to customer dashboard
 		
+		//user has submitted login
 		if($_POST)
 		{
-			//user has submitted login
 			$user = User::validate_login($_POST['email'], $_POST['password']);
 			
 			if($user)
