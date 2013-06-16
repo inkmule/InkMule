@@ -7,7 +7,7 @@
 		
 			<div class="alert-error">
 				<button type="button" class="close" data-dismiss="alert">&times;</button>
-				<strong>Error!</strong> <?echo $message;?>
+				<strong>Error! </strong> <?echo $message;?>
 			</div>
 		
 		<?}?>

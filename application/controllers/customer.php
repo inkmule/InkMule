@@ -43,6 +43,9 @@ class Customer extends Main_Controller
 			);
 			$this->form_validation->set_rules($rules);
 			$this->form_validation->set_message('is_unique', 'An account already exists for this email address.');
+			$this->form_validation->set_error_delimiters('<div class="alert-error">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>Error! </strong>', '</div>');
 			
 			if($this->form_validation->run() == TRUE)
 			{
