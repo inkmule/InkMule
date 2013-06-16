@@ -3,12 +3,14 @@
 		<fieldset>
 		    <legend>create an account</legend>
 		
+			<? echo validation_errors(); ?>
+		
 			<div class="control-group">
 			  <label class="control-label" for="inputIcon">first name</label>
 			  <div class="controls">
 			    <div class="input-prepend">
 			      <span class="add-on"><i class="icon-user"></i></span>
-			      <input class="span3" id="input_first_name" name="firstname" type="text">
+			      <input class="span3" id="input_first_name" name="firstname" type="text" value="<?php echo set_value('firstname'); ?>">
 			    </div>
 			  </div>
 			</div>
@@ -18,7 +20,7 @@
 			  <div class="controls">
 			    <div class="input-prepend">
 			      <span class="add-on"><i class="icon-user"></i></span>
-			      <input class="span3" id="input_last_name" name="lastname" type="text">
+			      <input class="span3" id="input_last_name" name="lastname" type="text" value="<?php echo set_value('lastname'); ?>">
 			    </div>
 			  </div>
 			</div>
@@ -28,7 +30,7 @@
 			  <div class="controls">
 			    <div class="input-prepend">
 			      <span class="add-on"><i class="icon-envelope"></i></span>
-			      <input class="span3" id="input_email" name="email" type="text">
+			      <input class="span3" id="input_email" name="email" type="text" value="<?php echo set_value('email'); ?>">
 			    </div>
 			  </div>
 			</div>

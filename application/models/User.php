@@ -2,12 +2,6 @@
 
 class User extends ActiveRecord\Model
 {
-	/*var $password = FALSE;
-	
-	function before_save($password)
-	{
-		$this->hashed_password = $this->hash_password($this->password);
-	}*/
 	
 	function set_password($plaintext)
 	{
