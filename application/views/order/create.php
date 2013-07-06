@@ -1,8 +1,28 @@
+<div class="row">
+<div class="span3">
+	<div class="well sidebar-nav affix">
+	            <ul class="nav nav-list">
+	              <li class="active"><a href="#intro">Intro</a></li>
+				  <li class=""><a href="#order-details">Order Details</a></li>
+				  <? //show fields for login form if user is not logged in
+					if(!$this->user){?>
+						<li class=""><a href="#create-account">Order Details</a></li>
+				  <?}?>
+	            </ul>
+	          </div><!--/.well -->
+</div><!--/span3-->
+<div class="span9">
 <? echo form_open('customer/create')?>
 		
 		<fieldset>
+			
+			<section id="intro" class="well">
+				<h1>Let's get started!</h1>
+				<p>Use this form to get an instant quote for custom apparel.</p>
+			</section>
+			
+			<section id="order-details">
 			<? echo validation_errors(); ?>
-		
 			<h2>1. enter order details</h2>
 			
 			<div class="control-group" id="shirt_quantity">
@@ -80,10 +100,11 @@
 				  </select>
 			  </div>
 			</div>
-			
+			</section><!--/order-details-->
 			<? //show fields for login form if user is not logged in
 			if(!$this->user){?>
 		
+			<section id="create-account">
 			<h2>2. create an account</h2>
 			
 			<div class="control-group">
@@ -137,8 +158,10 @@
 			</div>
 			<?}
 			else echo 'someone is logged in';?>
-			
+			</section><!--/create-account-->
 			<button type="submit" class="btn btn-primary">Submit</button>
 		
 		</fieldset>
 </form>
+</div><!--/span9-->
+</div><!--/row-->

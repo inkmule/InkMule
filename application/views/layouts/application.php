@@ -42,11 +42,10 @@
 
 	      <!-- Begin page content -->
 	      <div class="container">
-		  		<div class="hero-unit">
 					
 					<?=$yield?>
 				
-				</div>
+
 			</div>
 
 				<div id="push"></div>
