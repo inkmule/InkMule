@@ -1,6 +1,6 @@
 <div class="row">
 <div class="span3">
-	<div class="well sidebar-nav affix">
+	<div class="well sidebar-nav affix" id="side-nav">
 	            <ul class="nav nav-list">
 	              <li class="active"><a href="#intro">Intro</a></li>
 				  <li class=""><a href="#order-details">Order Details</a></li>
